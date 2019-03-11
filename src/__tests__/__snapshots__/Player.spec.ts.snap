@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player addResult should add a result with no update to rating or opponent 1`] = `
+Object {
+  "_rating": 0,
+  "_ratingDeviation": 2.01,
+  "_volatility": 0.06,
+  "defaultRating": 1500,
+  "opponentRatingDeviations": Array [
+    2.01,
+    2.01,
+    2.01,
+  ],
+  "opponentRatings": Array [
+    0,
+    0,
+    0,
+  ],
+  "outcomes": Array [
+    1,
+    0,
+    0.5,
+  ],
+  "rating": 1500,
+  "ratingDeviation": 350,
+  "tau": 0.5,
+  "volatility": 0.06,
+}
+`;
+
+exports[`Player addResult should add a result with no update to rating or opponent 2`] = `
+Object {
+  "_rating": 0,
+  "_ratingDeviation": 2.01,
+  "_volatility": 0.06,
+  "defaultRating": 1500,
+  "opponentRatingDeviations": Array [],
+  "opponentRatings": Array [],
+  "outcomes": Array [],
+  "rating": 1500,
+  "ratingDeviation": 350,
+  "tau": 0.5,
+  "volatility": 0.06,
+}
+`;
+
+exports[`Player addResult should add a result with no update to rating or opponent 3`] = `
+Object {
+  "rating": 1500,
+  "ratingDeviation": 350,
+  "volatility": 0.06,
+}
+`;
+
+exports[`Player addResult should add a result with no update to rating or opponent 4`] = `
+Object {
+  "rating": 1500,
+  "ratingDeviation": 350,
+  "volatility": 0.06,
+}
+`;
+
+exports[`Player compositePlayer should fail to make a composite of two incompatible players 1`] = `"All players must have equal tau and defaultRating"`;
+
+exports[`Player compositePlayer should fail to make a composite of with empty array 1`] = `"Cannot create a composite of 0 players"`;
+
+exports[`Player compositePlayer should make a default player when passed no settings 1`] = `
+Object {
+  "rating": 1550,
+  "ratingDeviation": 325,
+  "volatility": 0.06,
+}
+`;
+
+exports[`Player constructor should make a default player when passed no settings 1`] = `
+Object {
+  "rating": 1500,
+  "ratingDeviation": 350,
+  "volatility": 0.06,
+}
+`;
+
+exports[`Player constructor should support setting individual settings 1`] = `
+Object {
+  "rating": 1600,
+  "ratingDeviation": 350,
+  "volatility": 0.06,
+}
+`;
+
+exports[`Player createPlayerFactory should create new playerFactory 1`] = `
+Object {
+  "_rating": 0,
+  "_ratingDeviation": 1.15,
+  "_volatility": 0.09,
+  "defaultRating": 1600,
+  "opponentRatingDeviations": Array [],
+  "opponentRatings": Array [],
+  "outcomes": Array [],
+  "rating": 1600,
+  "ratingDeviation": 200,
+  "tau": 0.8,
+  "volatility": 0.09,
+}
+`;
+
+exports[`Player updateRatings should clear internals after update 1`] = `
+Object {
+  "_rating": 0,
+  "_ratingDeviation": 2.01,
+  "_volatility": 0.06,
+  "defaultRating": 1500,
+  "opponentRatingDeviations": Array [
+    2.01,
+    2.01,
+    2.01,
+  ],
+  "opponentRatings": Array [
+    0,
+    0,
+    0,
+  ],
+  "outcomes": Array [
+    1,
+    0,
+    0.5,
+  ],
+  "rating": 1500,
+  "ratingDeviation": 350,
+  "tau": 0.5,
+  "volatility": 0.06,
+}
+`;
+
+exports[`Player updateRatings should clear internals after update 2`] = `
+Object {
+  "_rating": 0,
+  "_ratingDeviation": 1.31,
+  "_volatility": 0.06,
+  "defaultRating": 1500,
+  "opponentRatingDeviations": Array [],
+  "opponentRatings": Array [],
+  "outcomes": Array [],
+  "rating": 1500,
+  "ratingDeviation": 227.74,
+  "tau": 0.5,
+  "volatility": 0.06,
+}
+`;

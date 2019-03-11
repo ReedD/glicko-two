@@ -1,0 +1,1408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match constructor should create a match between a player and a team 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1601,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1602,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1603,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match constructor should create a match between two players 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1600,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match constructor should create a match between two teams 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1501,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1502,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1503,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1601,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1602,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1603,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match constructor should create a match between uneven teams 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1501,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1502,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1503,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1504,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1601,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1602,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1603,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match constructor should fail to create if missing opponent 1`] = `"Each team must consist of at least one player"`;
+
+exports[`Match constructor should fail to create if team is empty 1`] = `"Each team must consist of at least one player"`;
+
+exports[`Match reporting should report player A won 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match reporting should report player A won 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        1,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match reporting should report player B won 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match reporting should report player B won 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        1,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match reporting should report players tied 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match reporting should report players tied 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0.5,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0.5,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match reporting should report team A won 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1501,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1502,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1503,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1601,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1602,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1603,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match reporting should report team A won 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0.6,
+      ],
+      "outcomes": Array [
+        1,
+      ],
+      "rating": 1501,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0.6,
+      ],
+      "outcomes": Array [
+        1,
+      ],
+      "rating": 1502,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0.6,
+      ],
+      "outcomes": Array [
+        1,
+      ],
+      "rating": 1503,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0,
+      ],
+      "rating": 1601,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0,
+      ],
+      "rating": 1602,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0,
+      ],
+      "rating": 1603,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match reporting should report team B won 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1501,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1502,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1503,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1601,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1602,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1603,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match reporting should report team B won 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0.6,
+      ],
+      "outcomes": Array [
+        0,
+      ],
+      "rating": 1501,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0.6,
+      ],
+      "outcomes": Array [
+        0,
+      ],
+      "rating": 1502,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0.6,
+      ],
+      "outcomes": Array [
+        0,
+      ],
+      "rating": 1503,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        1,
+      ],
+      "rating": 1601,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        1,
+      ],
+      "rating": 1602,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        1,
+      ],
+      "rating": 1603,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match reporting should report teams tied 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1501,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1502,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1503,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1601,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1602,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1603,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match reporting should report teams tied 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0.6,
+      ],
+      "outcomes": Array [
+        0.5,
+      ],
+      "rating": 1501,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0.6,
+      ],
+      "outcomes": Array [
+        0.5,
+      ],
+      "rating": 1502,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0.6,
+      ],
+      "outcomes": Array [
+        0.5,
+      ],
+      "rating": 1503,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0.5,
+      ],
+      "rating": 1601,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0.5,
+      ],
+      "rating": 1602,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.6,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0.5,
+      ],
+      "rating": 1603,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match updatePlayerRatings should handle team A win in 1v1 best of 5 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match updatePlayerRatings should handle team A win in 1v1 best of 5 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0.8,
+      "_ratingDeviation": 1.11,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1644.3,
+      "ratingDeviation": 193.53,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": -0.8,
+      "_ratingDeviation": 1.11,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1355.7,
+      "ratingDeviation": 193.53,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match updatePlayerRatings should handle team B win in 3v3 best of 5 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match updatePlayerRatings should handle team B win in 3v3 best of 5 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0.8,
+      "_ratingDeviation": 1.11,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1644.3,
+      "ratingDeviation": 193.53,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.8,
+      "_ratingDeviation": 1.11,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1644.3,
+      "ratingDeviation": 193.53,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": 0.8,
+      "_ratingDeviation": 1.11,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1644.3,
+      "ratingDeviation": 193.53,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": -0.8,
+      "_ratingDeviation": 1.11,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1355.7,
+      "ratingDeviation": 193.53,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": -0.8,
+      "_ratingDeviation": 1.11,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1355.7,
+      "ratingDeviation": 193.53,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+    Object {
+      "_rating": -0.8,
+      "_ratingDeviation": 1.11,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1355.7,
+      "ratingDeviation": 193.53,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
