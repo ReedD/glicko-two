@@ -4,6 +4,11 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "license": "MIT",
+  "homepage": "https://github.com/ReedD/glicko-two",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ReedD/glicko-two.git"
+  },
   "scripts": {
     "build": "yarn run clean:build && yarn run build:code && yarn run build:types && yarn clean:dist",
     "build:code": "babel src --extensions '.ts' --out-dir dist --copy-files",
