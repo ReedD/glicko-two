@@ -248,12 +248,16 @@ export default class Player {
     };
   }
 
-  toJSON() {
+  toObject() {
     return {
       rating: this.rating,
       ratingDeviation: this.ratingDeviation,
       volatility: this.volatility,
     };
+  }
+
+  toJSON() {
+    return this.toObject();
   }
 }
 
