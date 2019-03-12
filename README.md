@@ -1,6 +1,6 @@
 # Glicko 2
 
-The Glicko-2 rating system is a method for assessing a player's strength in games of skill, such as chess and Go. It was invented by [Mark Glickman](http://www.glicko.net) as an improvement of the Elo rating system, and initially intended for the primary use as a chess rating system. Glickman's principal contribution to measurement is "ratings reliability", called RD, for ratings deviation. You can read the full Glicko-2 documentation [here](http://glicko.net/glicko/glicko2.pdf).
+The Glicko-2 rating system is a method for assessing a player's strength in games of skill, such as chess and Go. It was invented by [Mark Glickman](http://www.glicko.net) as an improvement of the Elo rating system, and initially intended for the primary use as a chess rating system. Glickman's principal contribution to measurement is "ratings reliability", called RD, for ratings deviation. You can read the full Glicko-2 documentation/specification [here](http://glicko.net/glicko/glicko2.pdf).
 
 ## Install
 
@@ -8,7 +8,7 @@ The Glicko-2 rating system is a method for assessing a player's strength in game
 
 ## Basic Usage
 
-The following illustrates the most basic low-level usage of this module.
+The following illustrates the most basic low-level usage of this npm package:
 
 ```typescript
 import Player, { Outcome } from 'glicko-two';
@@ -54,7 +54,7 @@ kyle.updateRating();
 // }
 ```
 
-To simplify the usage of the above code we can do the following.
+To simplify the usage of the above code we can do the following:
 
 ```typescript
 import { createPlayerFactory, Match } from 'glicko-two';
@@ -93,7 +93,8 @@ match.updatePlayerRatings();
 
 ## Advanced Usage
 
-The `Match` class also supports team ranking, by using a "composite player" update method.
+The `Match` class also supports team ranking by using the "composite player" update method. This method is not apart of the original Glicko-2 specification. How you apply ranking updates to a player that's apart of a team is up for debate and depends heavily on your use case.
+
 > The Composite Opponent Update Method considers each outcome as a match against a single player possessing the average rating and deviation of the opposing team players. In effect, the update method creates a composite player out of the opposing team and uses this player’s resulting rating and deviation when updating a player. - [Garrick J. Williams](http://rhetoricstudios.com/downloads/AbstractingGlicko2ForTeamGames.pdf)
 
 ```typescript
@@ -123,9 +124,12 @@ match.updatePlayerRatings();
 
 ## When to update rankings
 
-Generally speaking, the system was designed to allow for a series of zero-many games played within a set rating period interval. At the end of the rating period, all players ratings would be updated. The rating interval length is up to the administrator.
+Generally speaking, the system was designed to allow for a series of zero to many games played within a set rating period interval. At the end of the rating period, all players ratings would be updated. The rating interval length is up to the administrator.
 
-> The Glicko-2 system works best when the number of games in a rating period is moderate to large, say an average of at least 10-15 games per player in a rating period. [Mark E. Glickman](http://www.glicko.net/glicko/glicko2.pdf)
+> The Glicko-2 system works best when the number of games in a rating period is moderate to large, say an average of at least 10-15 games per player in a rating period. - [Mark E. Glickman](http://www.glicko.net/glicko/glicko2.pdf)
 
 However, this is not always the case [lichess](https://lichess.org/qa/888/what-is-glicko-2-rating-volatility#answer-5619) for example updates after every single match.
 
+## Credit
+
+The translation of the Glicko-2 algorithm from spec to JavaScript was largely the work of an existing NPM package [glicko2](https://www.npmjs.com/package/glicko2).
