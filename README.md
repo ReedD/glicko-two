@@ -2,12 +2,16 @@
 
 The Glicko-2 rating system is a method for assessing a player's strength in games of skill, such as chess and Go. It was invented by [Mark Glickman](http://www.glicko.net) as an improvement of the Elo rating system, and initially intended for the primary use as a chess rating system. Glickman's principal contribution to measurement is "ratings reliability", called RD, for ratings deviation. You can read the full Glicko-2 documentation [here](http://glicko.net/glicko/glicko2.pdf).
 
+## Install
+
+`yarn add glicko-two`
+
 ## Basic Usage
 
 The following illustrates the most basic low-level usage of this module.
 
 ```typescript
-import Player, { Outcome } from 'glicko-2';
+import Player, { Outcome } from 'glicko-two';
 
 const mike = new Player({
   defaultRating: 1500,
@@ -53,7 +57,7 @@ kyle.updateRating();
 To simplify the usage of the above code we can do the following.
 
 ```typescript
-import { createPlayerFactory, Match } from 'glicko-2';
+import { createPlayerFactory, Match } from 'glicko-two';
 
 // First we can create a player factory with the
 // defaults we want set for each of our players
@@ -93,7 +97,7 @@ The `Match` class also supports team ranking, by using a "composite player" upda
 > The Composite Opponent Update Method considers each outcome as a match against a single player possessing the average rating and deviation of the opposing team players. In effect, the update method creates a composite player out of the opposing team and uses this player’s resulting rating and deviation when updating a player. - [Garrick J. Williams](http://rhetoricstudios.com/downloads/AbstractingGlicko2ForTeamGames.pdf)
 
 ```typescript
-import { createPlayerFactory, Match } from 'glicko-2';
+import { createPlayerFactory, Match } from 'glicko-two';
 
 const createPlayer = createPlayerFactory();
 

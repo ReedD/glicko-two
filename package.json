@@ -1,5 +1,5 @@
 {
-  "name": "glicko-2",
+  "name": "glicko-two",
   "version": "1.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -11,6 +11,7 @@
     "clean:build": "rm -rf dist",
     "clean:dist": "find ./dist -type d -name __tests__ -o -name __mocks__ -o -name __snapshots__ | xargs rm -rf",
     "precommit": "lint-staged",
+    "prepublishOnly": "yarn run build",
     "prettier": "yarn run prettier:ts -- \"./src/**/*.{ts,tsx}\"",
     "prettier:ts": "prettier --write",
     "start": "yarn run watch:client & yarn run watch:server",
