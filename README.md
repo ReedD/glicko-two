@@ -1,6 +1,7 @@
 # Glicko 2
 
-[![npm version](https://badge.fury.io/js/glicko-two.svg)](https://badge.fury.io/js/glicko-two)
+[![npm version](https://badge.fury.io/js/glicko-two.svg)](https://www.npmjs.com/package/glicko-two)
+
 
 The Glicko-2 rating system is a method for assessing a player's strength in games of skill, such as chess and Go. It was invented by [Mark Glickman](http://www.glicko.net) as an improvement of the Elo rating system, and initially intended for the primary use as a chess rating system. Glickman's principal contribution to measurement is "ratings reliability", called RD, for ratings deviation. You can read the full Glicko-2 documentation/specification [here](http://glicko.net/glicko/glicko2.pdf).
 
