@@ -79,7 +79,7 @@ const kyle = createPlayer();
 const match = new Match(mike, kyle);
 match.reportTeamAWon(); // mike won
 match.reportTeamBWon(); // kyle won
-match.reportTie();      // tie
+match.reportTie(); // tie
 match.updatePlayerRatings();
 // The results are the same as in the first example above
 // mike -> {
@@ -92,6 +92,28 @@ match.updatePlayerRatings();
 //   "ratingDeviation": 230.15,
 //   "volatility": 0.059998
 // }
+```
+
+Additionally you may also simply report outcomes numerically one at a time:
+
+```typescript
+const match = new Match(mike, kyle);
+match.reportOutcome([5, 3]); // mike won
+match.reportOutcome([2, 7]); // kyle won
+match.reportOutcome([6, 6]); // tie
+match.updatePlayerRatings();
+```
+
+Or in bulk:
+
+```typescript
+const match = new Match(mike, kyle);
+match.reportOutcomes([
+  [5, 3], // mike won
+  [2, 7], // kyle won
+  [6, 6], // tie
+]);
+match.updatePlayerRatings();
 ```
 
 ## Advanced Usage

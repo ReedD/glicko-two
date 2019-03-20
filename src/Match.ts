@@ -2,6 +2,7 @@ import Outcome, { negateOutcome } from './Outcome';
 import Player from './Player';
 
 export type MatchOpponent = Player | Player[];
+export type OutcomeReport = [number, number];
 
 // http://rhetoricstudios.com/downloads/AbstractingGlicko2ForTeamGames.pdf
 
@@ -35,6 +36,31 @@ export default class Match {
 
   reportTie() {
     this.reportATeamResult(Outcome.Tie);
+  }
+
+  reportOutcome([aScore, bScore]: OutcomeReport) {
+    if (
+      typeof aScore !== 'number' ||
+      typeof bScore !== 'number' ||
+      aScore < 0 ||
+      bScore < 0
+    ) {
+      throw new Error('Invalid outcome report');
+    }
+    if (aScore > bScore) {
+      this.reportTeamAWon();
+    } else if (aScore < bScore) {
+      this.reportTeamBWon();
+    } else if (aScore === bScore) {
+      this.reportTie();
+    } else {
+      // IMPOSSIBLE?!
+      throw new Error('Invalid outcome report');
+    }
+  }
+
+  reportOutcomes(outcomes: OutcomeReport[]) {
+    outcomes.forEach(outcome => this.reportOutcome(outcome));
   }
 
   updatePlayerRatings() {

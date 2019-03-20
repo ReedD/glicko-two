@@ -108,6 +108,70 @@ describe('Match', () => {
     });
   });
 
+  describe('manual reporting', () => {
+    it('should report player A won', () => {
+      const aPlayer = createPlayer();
+      const bPlayer = createPlayer();
+      const match = new Match(aPlayer, bPlayer);
+      expect(serializeMatch(match)).toMatchSnapshot();
+      match.reportOutcome([5, 3]);
+      expect(serializeMatch(match)).toMatchSnapshot();
+    });
+
+    it('should report player B won', () => {
+      const aPlayer = createPlayer();
+      const bPlayer = createPlayer();
+      const match = new Match(aPlayer, bPlayer);
+      expect(serializeMatch(match)).toMatchSnapshot();
+      match.reportOutcome([2, 7]);
+      expect(serializeMatch(match)).toMatchSnapshot();
+    });
+
+    it('should report players tied', () => {
+      const aPlayer = createPlayer();
+      const bPlayer = createPlayer();
+      const match = new Match(aPlayer, bPlayer);
+      expect(serializeMatch(match)).toMatchSnapshot();
+      match.reportOutcome([6, 6]);
+      expect(serializeMatch(match)).toMatchSnapshot();
+    });
+
+    it('should bulk report', () => {
+      const aPlayer = createPlayer();
+      const bPlayer = createPlayer();
+      const match = new Match(aPlayer, bPlayer);
+      expect(serializeMatch(match)).toMatchSnapshot();
+      match.reportOutcomes([[5, 3], [2, 7], [6, 6]]);
+      expect(serializeMatch(match)).toMatchSnapshot();
+    });
+
+    it('should validate outcome', () => {
+      const aPlayer = createPlayer();
+      const bPlayer = createPlayer();
+      const match = new Match(aPlayer, bPlayer);
+
+      expect(() => {
+        (match as any).reportOutcome();
+      }).toThrowErrorMatchingSnapshot();
+
+      expect(() => {
+        (match as any).reportOutcome([1]);
+      }).toThrowErrorMatchingSnapshot();
+
+      expect(() => {
+        (match as any).reportOutcome([-1]);
+      }).toThrowErrorMatchingSnapshot();
+
+      expect(() => {
+        (match as any).reportOutcome(['a', 'b']);
+      }).toThrowErrorMatchingSnapshot();
+
+      expect(() => {
+        (match as any).reportOutcomes();
+      }).toThrowErrorMatchingSnapshot();
+    });
+  });
+
   describe('updatePlayerRatings', () => {
     it('should handle team A win in 1v1 best of 5', () => {
       const aPlayer = createPlayer();

@@ -287,6 +287,356 @@ exports[`Match constructor should fail to create if missing opponent 1`] = `"Eac
 
 exports[`Match constructor should fail to create if team is empty 1`] = `"Each team must consist of at least one player"`;
 
+exports[`Match manual reporting should bulk report 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match manual reporting should bulk report 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+        2.01,
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+        0,
+        0,
+      ],
+      "outcomes": Array [
+        1,
+        0,
+        0.5,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+        2.01,
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+        0,
+        0,
+      ],
+      "outcomes": Array [
+        0,
+        1,
+        0.5,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match manual reporting should report player A won 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match manual reporting should report player A won 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        1,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match manual reporting should report player B won 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match manual reporting should report player B won 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        1,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match manual reporting should report players tied 1`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [],
+      "opponentRatings": Array [],
+      "outcomes": Array [],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match manual reporting should report players tied 2`] = `
+Object {
+  "aTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0.5,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+  "bTeam": Array [
+    Object {
+      "_rating": 0,
+      "_ratingDeviation": 2.01,
+      "_volatility": 0.06,
+      "defaultRating": 1500,
+      "opponentRatingDeviations": Array [
+        2.01,
+      ],
+      "opponentRatings": Array [
+        0,
+      ],
+      "outcomes": Array [
+        0.5,
+      ],
+      "rating": 1500,
+      "ratingDeviation": 350,
+      "tau": 0.5,
+      "volatility": 0.06,
+    },
+  ],
+}
+`;
+
+exports[`Match manual reporting should validate outcome 1`] = `"Cannot read property 'Symbol(Symbol.iterator)' of undefined"`;
+
+exports[`Match manual reporting should validate outcome 2`] = `"Invalid outcome report"`;
+
+exports[`Match manual reporting should validate outcome 3`] = `"Invalid outcome report"`;
+
+exports[`Match manual reporting should validate outcome 4`] = `"Invalid outcome report"`;
+
+exports[`Match manual reporting should validate outcome 5`] = `"Cannot read property 'forEach' of undefined"`;
+
 exports[`Match reporting should report player A won 1`] = `
 Object {
   "aTeam": Array [
