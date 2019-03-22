@@ -2,6 +2,9 @@ import Outcome from './Outcome';
 
 export interface IPlayerOpts {
   defaultRating: number;
+  opponentRatingDeviations?: number[];
+  opponentRatings?: number[];
+  outcomes?: Outcome[];
   rating: number;
   ratingDeviation: number;
   tau: number;
@@ -14,15 +17,18 @@ export default class Player {
   private readonly tau: number;
   private readonly defaultRating: number;
 
+  private _opponentRatingDeviations: number[] = [];
+  private _opponentRatings: number[] = [];
+  private _outcomes: Outcome[] = [];
   private _rating: number;
   private _ratingDeviation: number;
   private _volatility: number;
-  private opponentRatings: number[] = [];
-  private opponentRatingDeviations: number[] = [];
-  private outcomes: Outcome[] = [];
 
   constructor({
     defaultRating,
+    opponentRatingDeviations,
+    opponentRatings,
+    outcomes,
     rating,
     ratingDeviation,
     tau,
@@ -33,6 +39,24 @@ export default class Player {
     this._rating = (rating - defaultRating) / Player.scalingFactor;
     this._ratingDeviation = ratingDeviation / Player.scalingFactor;
     this._volatility = volatility;
+
+    if (
+      Array.isArray(opponentRatingDeviations) ||
+      Array.isArray(opponentRatings) ||
+      Array.isArray(outcomes)
+    ) {
+      if (
+        (outcomes || []).length !== (opponentRatings || []).length ||
+        (outcomes || []).length !== (opponentRatingDeviations || []).length
+      ) {
+        throw new Error(
+          'opponentRatingDeviations, opponentRatings, outcomes must be of equal size',
+        );
+      }
+      this._opponentRatingDeviations = opponentRatingDeviations;
+      this._opponentRatings = opponentRatings;
+      this._outcomes = outcomes;
+    }
   }
 
   static compositePlayer(players: Player[]) {
@@ -61,6 +85,18 @@ export default class Player {
     });
   }
 
+  get opponentRatingDeviations() {
+    return [...this._opponentRatingDeviations];
+  }
+
+  get opponentRatings() {
+    return [...this._opponentRatings];
+  }
+
+  get outcomes() {
+    return [...this._outcomes];
+  }
+
   get rating() {
     return this._rating * Player.scalingFactor + this.defaultRating;
   }
@@ -74,9 +110,9 @@ export default class Player {
   }
 
   addResult(opponent: Player, outcome: Outcome) {
-    this.opponentRatings.push(opponent._rating);
-    this.opponentRatingDeviations.push(opponent._ratingDeviation);
-    this.outcomes.push(outcome);
+    this._opponentRatings.push(opponent._rating);
+    this._opponentRatingDeviations.push(opponent._ratingDeviation);
+    this._outcomes.push(outcome);
   }
 
   // Calculates the new rating and rating deviation of the player.
@@ -109,11 +145,11 @@ export default class Player {
       1 / Math.sqrt(1 / Math.pow(this._ratingDeviation, 2) + 1 / v);
 
     let tempSum = 0;
-    for (let i = 0, len = this.opponentRatings.length; i < len; i++) {
+    for (let i = 0, len = this._opponentRatings.length; i < len; i++) {
       tempSum +=
-        this.g(this.opponentRatingDeviations[i]) *
-        (this.outcomes[i] -
-          this.E(this.opponentRatings[i], this.opponentRatingDeviations[i]));
+        this.g(this._opponentRatingDeviations[i]) *
+        (this._outcomes[i] -
+          this.E(this._opponentRatings[i], this._opponentRatingDeviations[i]));
     }
     this._rating += Math.pow(this._ratingDeviation, 2) * tempSum;
 
@@ -130,13 +166,13 @@ export default class Player {
   }
 
   private cleanPreviousMatches() {
-    this.opponentRatings = [];
-    this.opponentRatingDeviations = [];
-    this.outcomes = [];
+    this._opponentRatings = [];
+    this._opponentRatingDeviations = [];
+    this._outcomes = [];
   }
 
   private hasPlayed() {
-    return this.outcomes.length > 0;
+    return this._outcomes.length > 0;
   }
 
   private volatilityAlgorithm(v: number, delta: number) {
@@ -188,16 +224,16 @@ export default class Player {
   }
 
   // Calculation of the estimated variance of the player's rating based on game
-  // outcomes
+  // _outcomes
   private variance() {
     let tempSum = 0;
-    for (let i = 0, len = this.opponentRatings.length; i < len; i++) {
+    for (let i = 0, len = this._opponentRatings.length; i < len; i++) {
       const tempE = this.E(
-        this.opponentRatings[i],
-        this.opponentRatingDeviations[i],
+        this._opponentRatings[i],
+        this._opponentRatingDeviations[i],
       );
       tempSum +=
-        Math.pow(this.g(this.opponentRatingDeviations[i]), 2) *
+        Math.pow(this.g(this._opponentRatingDeviations[i]), 2) *
         tempE *
         (1 - tempE);
     }
@@ -224,11 +260,11 @@ export default class Player {
   // Calculation of the estimated improvement in rating (step 4 of the algorithm)
   private delta(v: number) {
     let tempSum = 0;
-    for (let i = 0, len = this.opponentRatings.length; i < len; i++) {
+    for (let i = 0, len = this._opponentRatings.length; i < len; i++) {
       tempSum +=
-        this.g(this.opponentRatingDeviations[i]) *
-        (this.outcomes[i] -
-          this.E(this.opponentRatings[i], this.opponentRatingDeviations[i]));
+        this.g(this._opponentRatingDeviations[i]) *
+        (this._outcomes[i] -
+          this.E(this._opponentRatings[i], this._opponentRatingDeviations[i]));
     }
     return v * tempSum;
   }
@@ -250,6 +286,9 @@ export default class Player {
 
   toObject() {
     return {
+      opponentRatingDeviations: this.opponentRatingDeviations,
+      opponentRatings: this.opponentRatings,
+      outcomes: this.outcomes,
       rating: this.rating,
       ratingDeviation: this.ratingDeviation,
       volatility: this.volatility,
@@ -267,12 +306,18 @@ export const createPlayerFactory = ({
   defaultVolatility = 0.06,
   tau = 0.5,
 } = {}) => ({
+  opponentRatingDeviations = [] as number[],
+  opponentRatings = [] as number[],
+  outcomes = [] as Outcome[],
   rating = defaultRating,
   ratingDeviation = defaultRatingDeviation,
   volatility = defaultVolatility,
 } = {}) =>
   new Player({
     defaultRating,
+    opponentRatingDeviations,
+    opponentRatings,
+    outcomes,
     rating,
     ratingDeviation,
     tau,

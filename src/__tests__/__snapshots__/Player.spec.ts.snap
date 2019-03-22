@@ -46,6 +46,21 @@ Object {
 
 exports[`Player addResult should add a result with no update to rating or opponent 3`] = `
 Object {
+  "opponentRatingDeviations": Array [
+    2.014761872416068,
+    2.014761872416068,
+    2.014761872416068,
+  ],
+  "opponentRatings": Array [
+    0,
+    0,
+    0,
+  ],
+  "outcomes": Array [
+    1,
+    0,
+    0.5,
+  ],
   "rating": 1500,
   "ratingDeviation": 350,
   "volatility": 0.06,
@@ -54,6 +69,9 @@ Object {
 
 exports[`Player addResult should add a result with no update to rating or opponent 4`] = `
 Object {
+  "opponentRatingDeviations": Array [],
+  "opponentRatings": Array [],
+  "outcomes": Array [],
   "rating": 1500,
   "ratingDeviation": 350,
   "volatility": 0.06,
@@ -66,6 +84,9 @@ exports[`Player compositePlayer should fail to make a composite of with empty ar
 
 exports[`Player compositePlayer should make a default player when passed no settings 1`] = `
 Object {
+  "opponentRatingDeviations": Array [],
+  "opponentRatings": Array [],
+  "outcomes": Array [],
   "rating": 1550,
   "ratingDeviation": 325,
   "volatility": 0.06,
@@ -74,6 +95,9 @@ Object {
 
 exports[`Player constructor should make a default player when passed no settings 1`] = `
 Object {
+  "opponentRatingDeviations": Array [],
+  "opponentRatings": Array [],
+  "outcomes": Array [],
   "rating": 1500,
   "ratingDeviation": 350,
   "volatility": 0.06,
@@ -82,11 +106,20 @@ Object {
 
 exports[`Player constructor should support setting individual settings 1`] = `
 Object {
+  "opponentRatingDeviations": Array [],
+  "opponentRatings": Array [],
+  "outcomes": Array [],
   "rating": 1600,
   "ratingDeviation": 350,
   "volatility": 0.06,
 }
 `;
+
+exports[`Player constructor should throw if invalid player 1`] = `"opponentRatingDeviations, opponentRatings, outcomes must be of equal size"`;
+
+exports[`Player constructor should throw if invalid player 2`] = `"opponentRatingDeviations, opponentRatings, outcomes must be of equal size"`;
+
+exports[`Player constructor should throw if invalid player 3`] = `"opponentRatingDeviations, opponentRatings, outcomes must be of equal size"`;
 
 exports[`Player createPlayerFactory should create new playerFactory 1`] = `
 Object {

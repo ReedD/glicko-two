@@ -60,6 +60,18 @@ describe('Player', () => {
       const player = createPlayer({ rating: 1600 });
       expect(player).toMatchSnapshot();
     });
+
+    it('should throw if invalid player', () => {
+      expect(() =>
+        createPlayer({ outcomes: [1] }),
+      ).toThrowErrorMatchingSnapshot();
+      expect(() =>
+        createPlayer({ opponentRatingDeviations: [1] }),
+      ).toThrowErrorMatchingSnapshot();
+      expect(() =>
+        createPlayer({ opponentRatings: [1] }),
+      ).toThrowErrorMatchingSnapshot();
+    });
   });
 
   describe('addResult', () => {
